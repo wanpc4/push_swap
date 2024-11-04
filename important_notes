@@ -1,2 +1,0 @@
-Compilation to test error checking:
-cd srcs/main && gcc push_swap.c ../../error/error_checker_1.c  ../../includes/push_swap.h -o push_swap

@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_check_sign.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: wwan-ab- <wwan-ab-@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/25 08:03:21 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/25 16:38:29 by wwan-ab-         ###   ########.fr       */
+/*   Created: 2024/10/30 08:18:25 by wwan-ab-          #+#    #+#             */
+/*   Updated: 2024/10/30 08:18:27 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/push_swap.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new);
-
-void	ft_lstadd_front(t_list **lst, t_list *new)
+int ft_check_sign(int c)
 {
-	if (lst && new)
-	{
-		new -> next = *lst;
-		*lst = new;
-	}
+    if (c == '+' || c == '-')
+        return (1);
+    return (0);
 }

@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwan-ab- <wwan-ab-@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/25 08:09:10 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/25 08:10:30 by wwan-ab-         ###   ########.fr       */
+/*   Created: 2024/10/30 08:18:09 by wwan-ab-          #+#    #+#             */
+/*   Updated: 2024/10/30 08:18:16 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/push_swap.h"
 
-t_list	*ft_lstlast(t_list *lst);
-
-t_list	*ft_lstlast(t_list *lst)
+int ft_isspace(int c)
 {
-	while (lst)
-	{
-		if (!lst -> next)
-		{
-			return (lst);
-		}
-		lst = lst -> next;
-	}
-	return (lst);
+    if (c == ' ' || c == '\f' || c == '\n' ||
+        c == '\r' || c == '\t' || c == '\v')
+        return (1);
+    return (0);
 }
