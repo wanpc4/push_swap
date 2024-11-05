@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: wwan-ab- wwan-ab-@student.42kl.edu.my      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:54:54 by wwan-ab-          #+#    #+#             */
 /*   Updated: 2024/11/04 09:14:16 by wwan-ab-         ###   ########.fr       */
@@ -18,13 +18,8 @@
 # include <stdlib.h>
 # include "../Libft/libft.h"
 # include "../ft_printf/ft_printf.h"
-//# include "get_next_line.h"
 # define OH_NO -1
 
-/*
-    Create structure for stacks
-    Yes, this is based on Linked List (DSA)
-*/
 typedef struct s_stacks
 {
     int val;
@@ -53,7 +48,6 @@ int     get_distance(t_stacks **stack, int index);
 void    make_top(t_stacks **stack, int distance);
 void    free_stack(t_stacks **stack);
 void    index_stack(t_stacks **stack);
-
 
 t_stacks    *ft_lstnew(int content);
 void        ft_lstadd_front(t_stacks **stack, t_stacks *new);

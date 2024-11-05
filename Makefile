@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: wwan-ab- wwan-ab-@student.42kl.edu.my      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/11/04 17:57:13 by wwan-ab-          #+#    #+#              #
+#    Updated: 2024/11/04 17:57:18 by wwan-ab-         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC = gcc
 
 NAME = push_swap
@@ -6,7 +18,7 @@ LIBFT_A = libft.a
 
 FT_PRINTF_A = libftprintf.a
 
-CFLAGS = -Wall -Wextra -Werror -I. -fsanitize=address -g3
+CFLAGS = -Wall -Wextra -Werror -I. -g3
 #-fsanitize=address -g3
 REMOVE = rm -rf
 

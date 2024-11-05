@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   args_checker.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: wwan-ab- wwan-ab-@student.42kl.edu.my      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:00:31 by wwan-ab-          #+#    #+#             */
 /*   Updated: 2024/11/04 09:13:38 by wwan-ab-         ###   ########.fr       */
@@ -18,10 +18,10 @@ static int	ft_contains(int num, char *argv[], int i)
 	while (argv[i])
 	{
 		if (ft_atoi(argv[i]) == num)
-			return (1); //true (If contains number)
+			return (1);
 		i++;
 	}
-	return (0); //false
+	return (0);
 }
 
 static  int ft_isnumber(char *number)

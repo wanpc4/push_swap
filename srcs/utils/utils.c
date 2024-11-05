@@ -2,15 +2,17 @@
 
 #include "../../includes/push_swap.h"
 
-void    ft_free(char **str)
+void    ft_free(char **args)
 {
     int i;
 
     i = 0;
-    while (str[i])
+    while (args[i])
+    {
+        free(args[i]);
         i++;
-    while (i >= 0)
-        free(str[i--]);
+    }
+    free(args);
 }
 
 int     is_sorted(t_stacks **stack)
@@ -21,10 +23,10 @@ int     is_sorted(t_stacks **stack)
     while (head && head->next)
     {
         if (head->val > head->next->val)
-            return (EXIT_SUCCESS);
+            return (0);
         head = head->next;
     }
-    return (EXIT_FAILURE);
+    return (1);
 }
 
 int     get_distance(t_stacks **stack, int index)
@@ -67,15 +69,12 @@ void    make_top(t_stacks **stack, int distance)
 
 void    free_stack(t_stacks **stack)
 {
-    t_stacks    *head;
-    t_stacks    *temp;
+    t_stacks *temp;
 
-    head = *stack;
-    while (head)
+    while (*stack)
     {
-        temp = head;
-        head = head->next;
+        temp = *stack;
+        *stack = (*stack)->next;
         free(temp);
-    }
-    free(stack);
+    }   
 }

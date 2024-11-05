@@ -12,24 +12,24 @@
 
 #include "../../includes/push_swap.h"
 
-static  int get_max_num(t_stacks **stack)
+static  int get_max_bit(t_stacks **stack)
 {
     t_stacks    *head;
     int         max;
-    int         max_num;
+    int         max_bit;
 
     head = *stack;
     max = head->index;
-    max_num = 0;
+    max_bit = 0;
     while (head)
     {
         if (head->index > max)
             max = head->index;
         head = head->next;
     }
-    while ((max >> max_num) != 0)
-        max_num++;
-    return (max_num);
+    while ((max >> max_bit) != 0)
+        max_bit++;
+    return (max_bit);
 }
 
 void    radix_sort(t_stacks **stack_a, t_stacks **stack_b)
@@ -38,23 +38,22 @@ void    radix_sort(t_stacks **stack_a, t_stacks **stack_b)
     int         i;
     int         j;
     int         size;
-    int         max_num;
+    int         max_bit;
 
     i = 0;
     head_a = *stack_a;
     size = ft_lstsize(head_a);
-    max_num = get_max_num(stack_a);
-    while (i < max_num)
+    max_bit = get_max_bit(stack_a);
+    while (i < max_bit)
     {
         j = 0;
-        while (j < size)
+        while (j++ < size)
         {
             head_a = *stack_a;
             if (head_a && ((head_a->index >> i) & 1) == 1)
                 ra(stack_a);
             else
                 pb(stack_a, stack_b);
-            j++;
         }
         while (ft_lstsize(*stack_b) != 0)
             pa(stack_a, stack_b);
@@ -123,7 +122,7 @@ When the next iteration of the loop begins, `head_a` points to the old head, whi
 Here's a quick update for your loop in `radix_sort`:
 
 ```c
-while (i < max_num)
+while (i < max_bit)
 {
     j = 0;
     while (j < size)
