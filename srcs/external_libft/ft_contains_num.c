@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_sign.c                                    :+:      :+:    :+:   */
+/*   ft_contains_num.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wwan-ab- <wwan-ab-@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: wwan-ab- wwan-ab-@student.42kl.edu.my      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 08:18:25 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/10/30 08:18:27 by wwan-ab-         ###   ########.fr       */
+/*   Created: 2024/11/06 09:14:15 by wwan-ab-          #+#    #+#             */
+/*   Updated: 2024/11/06 09:15:45 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int ft_check_sign(int c)
+int	ft_contains_num(int num, char *argv[], int i)
 {
-    if (c == '+' || c == '-')
-        return (1);
-    return (0);
+	i += 1;
+	while (argv[i])
+	{
+		if (ft_atoi(argv[i]) == num)
+			return (1);
+		i += 1;
+	}
+	return (0);
 }

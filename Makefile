@@ -29,11 +29,14 @@ FT_PRINTF_SOURCES = ft_printf/$(FT_PRINTF_A)
 MAKE_SOURCES =  srcs/main/index.c \
 				srcs/main/push_swap.c \
 				srcs/main/radix_sort.c \
-				srcs/main/simple.c \
+				srcs/main/simple_sort_1.c \
+				srcs/main/simple_sort_2.c \
 				srcs/utils/args_checker.c \
 				srcs/utils/args_splitter.c \
 				srcs/utils/utils.c \
 				srcs/external_libft/ft_atol.c \
+				srcs/external_libft/ft_isnumber.c \
+				srcs/external_libft/ft_contains_num.c \
 				srcs/external_libft/external_libft_LL/push_swap_LL.c \
 				srcs/error/error_checker_1.c \
 				srcs/operation/process.c \

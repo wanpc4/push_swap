@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   simple_sort_1.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wwan-ab- wwan-ab-@student.42kl.edu.my      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/06 15:30:14 by wwan-ab-          #+#    #+#             */
+/*   Updated: 2024/11/06 16:11:53 by wwan-ab-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-static int	get_min(t_stacks **stack, int val)
+static	int	get_min(t_stacks **stack, int val)
 {
 	t_stacks	*head;
-	int		min;
+	int			min;
 
 	head = *stack;
 	min = head->index;
@@ -20,8 +31,8 @@ static int	get_min(t_stacks **stack, int val)
 static void	sort_3(t_stacks **stack_a)
 {
 	t_stacks	*head;
-	int		min;
-	int		next_min;
+	int			min;
+	int			next_min;
 
 	head = *stack_a;
 	min = get_min(stack_a, -1);
@@ -42,15 +53,7 @@ static void	sort_3(t_stacks **stack_a)
 			rra(stack_a);
 	}
 	else
-	{
-		if (head->next->index == min)
-			ra(stack_a);
-		else
-		{
-			sa(stack_a);
-			rra(stack_a);
-		}
-	}
+		sort_3_ex(stack_a, head, min);
 }
 
 static void	sort_4(t_stacks **stack_a, t_stacks **stack_b)

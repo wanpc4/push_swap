@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isspace.c                                       :+:      :+:    :+:   */
+/*   simple_sort_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wwan-ab- <wwan-ab-@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: wwan-ab- wwan-ab-@student.42kl.edu.my      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 08:18:09 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/10/30 08:18:16 by wwan-ab-         ###   ########.fr       */
+/*   Created: 2024/11/06 15:43:42 by wwan-ab-          #+#    #+#             */
+/*   Updated: 2024/11/06 16:10:58 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int ft_isspace(int c)
+void	sort_3_ex(t_stacks **stack_a, t_stacks *head, int min)
 {
-    if (c == ' ' || c == '\f' || c == '\n' ||
-        c == '\r' || c == '\t' || c == '\v')
-        return (1);
-    return (0);
+	if (head->next->index == min)
+		ra(stack_a);
+	else
+	{
+		sa(stack_a);
+		rra(stack_a);
+	}
 }
+/*
+    This file is created to save norminette length LOL.
+*/

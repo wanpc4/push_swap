@@ -37,10 +37,9 @@ void    num_handler(int iterator, char *args[]);
 char    **args_splitter(char *args[]);
 
 //External Libft functions
-int     ft_check_sign(int c);
-int     ft_isspace(int c);
-int     ft_strcmp(char *str1, char *str2);
 long    ft_atol(const char *str);
+int     ft_isnumber(char *number);
+int     ft_contains_num(int num, char *argv[], int i);
 
 void    ft_free(char **str);
 int     is_sorted(t_stacks **stack);
@@ -56,6 +55,7 @@ void        ft_lstadd_back(t_stacks **stack, t_stacks *new);
 int         ft_lstsize(t_stacks *lst);
 void        radix_sort(t_stacks **stack_a, t_stacks **stack_b);
 //void        ft_check_args(int argc, char *argv[]);
+void        sort_3_ex(t_stacks **stack_a, t_stacks *head, int min);
 void        sort_5(t_stacks **stack_a, t_stacks **stack_b);
 void        simple_sort(t_stacks **stack_a, t_stacks **stack_b);
 void        printList(t_stacks *head);
