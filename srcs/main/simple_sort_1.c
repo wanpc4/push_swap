@@ -6,7 +6,7 @@
 /*   By: wwan-ab- wwan-ab-@student.42kl.edu.my      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:30:14 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/11/06 16:11:53 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:18:20 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ static void	sort_4(t_stacks **stack_a, t_stacks **stack_b)
 	pa(stack_a, stack_b);
 }
 
-void	sort_5(t_stacks **stack_a, t_stacks **stack_b)
+static	void	sort_5(t_stacks **stack_a, t_stacks **stack_b)
 {
 	int	distance;
 
